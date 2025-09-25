@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/consumer.dir/callFriendService.cpp.o CMakeFiles/consumer.dir/__/friend.pb.cc.o -o ../../../../bin/consumer   -L/home/hanhan/Desktop/4/lib  -Wl,-rpath,/home/hanhan/Desktop/4/lib ../../../../lib/librpc_lib.a -lprotobuf -lboost_serialization 

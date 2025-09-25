@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/test_hook.dir/test_hook.cpp.o -o ../../../bin/test_hook   -L/home/hanhan/Desktop/4/lib  -Wl,-rpath,/home/hanhan/Desktop/4/lib ../../../lib/libfiber_lib.a -lpthread -ldl -ldl 
