@@ -30,7 +30,14 @@ std::string generateKey(std::mt19937& rng) {
         return prefix + "hot";  // 热点键：如user:hot、goods:hot
     } else {
         std::uniform_int_distribution<int> idDist(1000, 9999);
-        return prefix + std::to_string(idDist(rng));  // 随机键：如user:1234
+        std::string key = prefix + std::to_string(idDist(rng));
+        // 新增：普通键首次生成时打印日志
+        static std::unordered_set<std::string>普通_keys;
+        if (普通_keys.find(key) == 普通_keys.end()) {
+            普通_keys.insert(key);
+            std::cout << "[KeyGen] 生成普通键：" << key << "\n" << std::flush;
+        }
+        return key;
     }
 }
 

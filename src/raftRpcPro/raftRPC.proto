@@ -22,7 +22,7 @@ message AppendEntriesArgs  {
 	int32 LeaderCommit  = 6;
 }
 
-// AppendEntriesReply 论文中没有提及返回要设置哪些状态
+
 message AppendEntriesReply {
 	int32 Term =1;             // leader的term可能是与Follower不同的，
 	bool Success      =2;
